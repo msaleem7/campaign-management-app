@@ -1,0 +1,15 @@
+<%= form_with model: 
+    if locals[:type] == "Topic"
+        [@campaign,locals[:commentable],locals[:commentable].comments.build]
+        else
+        [locals[:commentable],locals[:commentable].comments.build]
+    end  do |form| %>
+
+        <%= form.text_field :title ,class: "form-control form-control-lg", id: "comment_input"%>
+  
+    <%= form.submit "add a comment",class: "invisible"%>
+  
+<% end %>
+
+
+

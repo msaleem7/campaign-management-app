@@ -1,0 +1,40 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#todos_container{
+    background-color: rgb(202, 177, 156);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+
+}
+
+#todo_headings{
+    
+
+}
+
+#todo_content{
+}
+
+#status_false{
+    margin-left: 25px;
+}
+
+#status_true{
+    margin-left: 25px;
+    color: rgb(5, 141, 5);
+}
+
+#action{
+    margin-left: 25px;
+    
+    }
+
+
+
+#btn{
+    
+    margin-left: 50px;
+}

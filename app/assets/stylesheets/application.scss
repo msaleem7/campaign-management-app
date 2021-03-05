@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ 
+ */
+    @import "bootstrap";
+    @import "todos";
+    @import "comments";
+    @import "registration_form";
+
+
+    body {
+      background-color: rgb(216, 212, 212);
+      color: #333;
+    }
+    
+    body, p, ol, ul, td {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 18px; }
+    
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px; }
+    
+    a {
+      color: #000;
+      text-decoration: none; 
+    }
+    
+    a:visited {
+      color: rgb(51, 47, 47); }
+    
+    a:hover {
+      color: rgb(0, 0, 0);
+      background: none; }
+    
+    th {
+      padding-bottom: 5px; }
+    
+    td {
+      padding: 0 5px 7px; }
+    
+    div.field,
+    div.actions {
+      margin-bottom: 10px; }
+    
+    
+  
+    #app_header{
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+    }
+  
+    #header_options{
+      // display: flex;
+      // justify-content: space-evenly;
+      color: chartreuse;
+  
+    }
+  
+    #options{
+      align-self: center;
+      padding: 0px 5px;
+    }
+  
+    .rounded-circle{
+  height: 50px;
+  width: 50px;    
+    }
+  
+    #notice {
+      color: rgb(15, 194, 15); }
+    
+    .field_with_errors {
+      padding: 2px;
+      background-color: rgb(245, 6, 6);
+      display: table; }
+    
+    #error_explanation {
+      width: 450px;
+      border: 2px solid rgb(241, 4, 4);
+      padding: 7px 7px 0;
+      margin-bottom: 20px;
+      background-color: #f0f0f0; }
+    
+    #error_explanation h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px -7px 0;
+      background-color: rgb(235, 19, 19);
+      color: #fff; }
+    
+    #error_explanation ul li {
+      font-size: 12px;
+      list-style: square; }
+    
+    label {
+      display: block; }
+  
+      .bg-custom-1 {
+        background-color: #85144b;
+      }
+      
+      .bg-custom-2 {
+      background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+      }
+      
+      #action_delete{
+
+        color:rgb(236, 0, 0);
+        margin-left: 10px;
+    }
+    
+    #action_edit{
+    
+        color:rgb(0, 38, 255);
+    }
+    
+    #account_info{
+
+      background-color: rgb(202, 177, 156);
+      border-radius: 30px;
+      height: 600px;
+
+    }
+      
+    #index_links{
+      padding-top: 10px;
+      font-size: large;
+      color: rgb(122, 15, 8);
+      font-weight: 600;
+      text-decoration: none;
+      
+    }
+
+    .index_table{
+      margin-top: 70px;
+      border: 1px solid gray;
+        
+        
+    }
+
+    
+    .page_heading{
+      margin-top: 70px;
+      font-family: sans-serif;
+      font-weight: 900;
+  }

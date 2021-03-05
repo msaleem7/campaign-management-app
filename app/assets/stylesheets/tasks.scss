@@ -1,0 +1,44 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#headings{
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+#content{
+    margin-bottom: 10px;
+}
+
+#status_false{
+    margin-left: 25px;
+}
+
+#status_true{
+    margin-left: 25px;
+    color: rgb(6, 177, 6);
+}
+
+#action{
+    margin-left: 25px;
+    
+    }
+
+#action_delete{
+
+    color:rgba(219, 26, 26, 0.979);
+}
+
+#action_edit{
+
+    color:rgb(30, 64, 255);
+}
+
+
+#btn{
+    
+    margin-left: 50px;
+}

@@ -1,0 +1,65 @@
+
+<div class="container" id="todos_container">
+    <div class="container mb-4" id="todo_headings">
+    <div class="row mx-4">
+    <div class="col-5 offset-2 ">
+    <h5>Description</h5>
+    
+    </div>
+
+    <div class="col-3">
+    <h5>Completed</h5>
+     </div>
+     
+    <%# <div class="col-3" >
+    <h5 id="action">Action</h5>
+    </div> %>
+</div>
+</div>
+<ol>
+<% @campaign.todos.each do |todo| %>
+        <div class="container" id="todo_content">
+            <div class="row mx-1">
+                <div class="col-5 offset-2">
+                    <p><%= todo.description %></p>
+                </div>
+
+                <div class="col-3" >
+                    <%if todo.completed %>
+                            <p id="status_true">✔</p>
+                       <% else %>
+                           <p id="status_false">✖</p>         
+                       <% end %>
+                </div>
+
+                     
+                    <div class="col-1"  >
+                            <%= link_to "🖋", edit_campaign_todo_path(@campaign,todo),id:"action_edit" if policy(todo).edit?%>
+
+                            <%= link_to "🗑", [@campaign,todo],id:"action_delete",
+                        method: :delete,
+                        data: {confirm: "Are you sure?"} if policy(todo).destroy?%>
+        
+                </div>
+            </div>
+        </div>
+<% end %>
+</ol>
+
+    
+
+             <% if current_user.id==@campaign.user_id %>
+             <div class="row my-2">
+                <div class="col offset-2">
+                    <%= link_to "Add todo", new_campaign_todo_path(@campaign),class:"btn btn-outline-dark btn-sm " ,id:"btn" , role:"button"  %>
+                </div>
+            </div>
+<% end %>           
+</div>
+
+
+
+
+
+
+ 

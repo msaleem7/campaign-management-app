@@ -1,0 +1,78 @@
+<div class="signup_container container">
+<div class="text-center my-2">
+ <h2 class="page_heading">Sign up</h2>
+</div>
+           
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  
+  <div class="form-group row mt-5">
+        <%= f.label :username, class:"col-sm-2 col-form-label"  %>
+
+    <div class="col-sm-10">
+        <%= f.text_field :username, class: "form-control",placeholder:"Username"  %>
+    </div>
+  </div>
+  
+  <div class="form-group row mt- ">
+        <%= f.label :email, class:"col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+        <%= f.text_field :email, class: "form-control",placeholder:"Email"  %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+      <%= f.label "Password", class:"col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+    <%= f.password_field :password, autocomplete: "new-password",class: "form-control
+    ",placeholder:"Password" %>
+    </div>
+  </div>
+
+   <div class="form-group row">
+      <%= f.label "Confirm Password", class:"col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control",placeholder:"Confirm Password" %>
+    </div>
+  </div>
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <%= f.label :Novice,class:'form-check-label' %>
+          <%= f.radio_button :type, :Novice, id:"radio_button_novice" %>
+        </div>
+        <div class="form-check">
+        <%= f.label :Expert, class:'form-check-label' %>
+         <%= f.radio_button :type, :Expert, id:"radio_button_expert" %>
+        </div>
+        </div>     
+      </div>
+
+      <div class="form-group row ">
+        <%= f.label :profession, class:"col-sm-2 col-form-label" ,id:"label_service" %>
+    <div class="col-sm-10">
+        <%= f.text_field :service, class: "form-control", id:"input_service",placeholder:"Service"  %>
+    </div>
+  </div>
+
+  <div class="form-group row ">
+  
+    <%= f.label :profession, class:"col-sm-2 col-form-label",id:"label_profession"%>
+    <div class="col-sm-10">
+        <%= f.text_field :profession, class: "form-control", id:"input_profession",placeholder:"Profession"  %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+      <div class="row">
+        <p class="mt-2"><Strong><%= link_to "Already have an account?", :user_session,class:"nav-link"  %></Strong></p>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+</div>

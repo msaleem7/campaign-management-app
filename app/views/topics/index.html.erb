@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="text-center my-2">
+        <h2 class="page_heading">Discussion Topics</h2>
+    </div>
+    <table class="table table-striped table-hover table-responsive-sm index_table">
+  <thead class="thead-dark">
+    <tr class="table_row">
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Comments</th>
+      <th scope="col">Created By</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @topics.each_with_index do |topic, index|%>                    
+    <tr class="table_row">
+      <th scope="row"><%= index %></th>
+      <td><%= link_to topic.title.capitalize, [@campaign,topic] ,id:"index_links"%></td>
+      <td class="px-5"><%= topic.comments.count %></td>
+      <td class="px-5"><%= topic.topic_creator.username.capitalize %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<% if policy(@topics).create? %>
+    <div class="col">
+        <%= link_to 'Add Topic', new_campaign_topic_path(@campaign),class:"btn btn-outline-dark btn-sm mx-1" ,  role:"button" %>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+       
+       
+        
