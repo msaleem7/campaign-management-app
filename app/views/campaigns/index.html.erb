@@ -22,8 +22,5 @@
     <% end %>
   </tbody>
 </table>
+<% if policy(@campaigns).create? %> <div class="col"> <%= link_to 'Add Campaign', :new_campaign,class:"btn btn-outline-dark btn-sm mx-1" ,  role:"button" %> </div> <% end %>
 </div>
-
-
-
-
