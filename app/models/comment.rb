@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
 
-  validates :title, presence: true, length: { minimum: 3 }, format: {with: /[a-zA-Z]/}
+  validates :title, presence: true, length: { minimum: 1 }, format: {with: /[a-zA-Z]/}
 
 
   belongs_to :commentable, polymorphic: true

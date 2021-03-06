@@ -55,7 +55,8 @@ class CommentsController < ApplicationController
           : (redirect_to campaign_topic_path(params[:campaign_id],@commentable))
         else
             flash[:error] = 'Something went wrong'
-            redirect_to comments_url
+            @commentable.class.name=="Campaign"? (redirect_to campaign_path(@commentable)) 
+          : (redirect_to campaign_topic_path(params[:campaign_id],@commentable))
         end
     end
 

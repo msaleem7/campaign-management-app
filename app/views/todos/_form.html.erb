@@ -20,9 +20,11 @@
   <div class="form-group row">
     <div class="col-sm-10">
     <% if @todo.persisted? %>
-        <%= f.submit "Create" , class:"btn btn-dark" %>      
+        <%= f.submit "Update" , class:"btn btn-dark" %>    
+
     <% else %>
-        <%= f.submit "Update" , class:"btn btn-dark" %>      
+        <%= f.submit "Create" , class:"btn btn-dark" %>      
+  
       <% end %>
     </div>
   </div>
